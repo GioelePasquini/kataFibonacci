@@ -5,14 +5,16 @@ import static org.junit.Assert.assertEquals;
 
 public class FibonacciTest {
 
-    @Before
-    public void setUp(){
+    FibonacciAnalyzer fibonacciAnalyzer;
 
+    @Before
+    public void setUp() {
+        fibonacciAnalyzer = new FibonacciAnalyzer();
     }
 
     @Test
-    public void testing_fibonacci_of_8(){
-        FibonacciAnalyzer fibonacciAnalyzer = new FibonacciAnalyzer();
+    public void testing_fibonacci_of_8() {
+
         int result = fibonacciAnalyzer.searchFibonacciNumber(8);
 
         assertEquals(result, 21);
