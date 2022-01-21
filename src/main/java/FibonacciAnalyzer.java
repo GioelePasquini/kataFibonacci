@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class FibonacciAnalyzer {
     public int searchFibonacciNumber(int number) {
         if(number <= 1) {
@@ -12,5 +14,9 @@ public class FibonacciAnalyzer {
             prevFib = temp;
         }
         return fib;
+    }
+
+    public ArrayList<Integer> productFib(int i) {
+        return null;
     }
 }
