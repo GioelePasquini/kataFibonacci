@@ -16,7 +16,29 @@ public class FibonacciAnalyzer {
         return fib;
     }
 
-    public ArrayList<Integer> productFib(int i) {
-        return null;
+    public ArrayList<Integer> productFib(int product) {
+        ArrayList<Integer> result = new ArrayList<>();
+        boolean flag = false;
+        for (int i = 0; i < product; i++) {
+            if (searchFibonacciNumber(i) * searchFibonacciNumber(i + 1) == product) {
+                result.add(searchFibonacciNumber(i));
+                result.add(searchFibonacciNumber(i + 1));
+                result.add(1);
+                flag = true;
+            }
+        }
+        if (flag == false) {
+            for (int i = 0; i < product; i++) {
+                if (searchFibonacciNumber(i) * searchFibonacciNumber(i + 1) > product) {
+                    result.add(searchFibonacciNumber(i));
+                    result.add(searchFibonacciNumber(i + 1));
+                    result.add(0);
+                    break;
+
+                }
+
+            }
+        }
+        return result;
     }
 }
